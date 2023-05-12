@@ -114,7 +114,7 @@ Contributions are what make the open source community such an amazing place to b
 
 Abdullah Al Faroque - [@rfnshare](https://twitter.com/rfnshare) - aalfaroque@gmail.com
 
-Project Link: [Sharebus Web Automation](https://github.com/rfnshare/Automation-Exercise.git)
+Project Link: [Automation Exercise](https://github.com/rfnshare/Automation-Exercise.git)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
