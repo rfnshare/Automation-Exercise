@@ -38,7 +38,7 @@ print(report)
 
 # html report open
 html_open_report = f"start {report}"
-subprocess.run(html_open_report, shell=True)
+# subprocess.run(html_open_report, shell=True)
 
 # allure report serve
 allure_serve_command = f"allure serve Reports/AllureReports/{test_type}_report_allure/{report_file_name_prefix}"

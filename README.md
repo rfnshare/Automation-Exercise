@@ -52,14 +52,8 @@ This is an selenium based framework that interacts with automationexercise Web A
     ```
     pip install -r requirements.txt
     ```
-   
-5. For Smoke set without report, Run this script.
-    ```
-    python -m pytest -m smoke
-    ```
-   This will open a web app in the chosen browser & run smoke set.
 
-6. For Full Run this script from cmd line without report.
+5. For Full Run this script from cmd line without report.
     ```
     python -m pytest -v -s
     ```
