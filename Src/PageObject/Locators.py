@@ -3,7 +3,8 @@ from selenium.webdriver.common.by import By
 
 class HomePageLocators:
     # Home Dashboard Page
-    NAVBAR = (By.XPATH, "//h1")
+    SLIDER = (By.ID, "slider-carousel")
+    NAVBAR = (By.XPATH, "//ul[contains(@class,'navbar-nav')]")
 
 
 class CartPageLocators:
