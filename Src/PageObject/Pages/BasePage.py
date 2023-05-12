@@ -358,7 +358,7 @@ class BasePage(object):
         return select.select_by_index(index)
 
     # Select 'Select' element by visible text
-    def select_by_visible_text(self, text, *locator):
+    def select_by_visible_text(self, text, locator):
         select = Select(self.find_element(*locator))
         return select.select_by_visible_text(text)
 
@@ -672,7 +672,7 @@ class BasePage(object):
         else:
             assert expected_val not in val
 
-    def assert_element_text(self, choice, expected_val, *locator):
+    def assert_element_text(self, choice, expected_val, locator):
         val = self.get_text(*locator)
         # print(val)
         if choice is True:
