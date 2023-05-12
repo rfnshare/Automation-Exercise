@@ -1,0 +1,2 @@
+class MyBusesData:
+    pass
