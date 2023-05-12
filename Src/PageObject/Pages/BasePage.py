@@ -61,8 +61,8 @@ class BasePage(object):
         element.clear()
 
     # Click
-    def click(self, *locator):
-        element = self.find_element(*locator)
+    def click(self, locator):
+        element = self.driver.find_element(*locator)
         element.click()
 
     @staticmethod
@@ -96,7 +96,7 @@ class BasePage(object):
     """
 
     # Element is displayed or not
-    def element_is_displayed(self, *locator):
+    def element_is_displayed(self, locator):
         element = self.find_element(*locator)
         res = element.is_displayed()
         return res
@@ -143,8 +143,9 @@ class BasePage(object):
         # print(element)
         return element
 
-    def wait_for_clickable_an_element(self, element):
+    def wait_for_clickable_an_element(self, locator):
         wait = WebDriverWait(self.driver, 10)
+        element = self.driver.find_element(*locator)
         wait.until(EC.element_to_be_clickable(element))
 
     # Implicit wait
@@ -461,6 +462,11 @@ class BasePage(object):
         actions.move_to_element(element)
         actions.perform()
 
+    def scroll_to_web_element(self, element):
+        actions = ActionChains(self.driver)
+        actions.move_to_element(self.driver.find_element(*element))
+        actions.perform()
+
     """
         Common Actions
     """
@@ -563,8 +569,8 @@ class BasePage(object):
         Validation Actions
     """
 
-    def assert_element_is_displayed(self, message="element is found", *locator):
-        res = self.element_is_displayed(*locator)
+    def assert_element_is_displayed(self, locator,  message="element is found"):
+        res = self.element_is_displayed(locator)
         # print(res)
         assert res is True
         print(message)

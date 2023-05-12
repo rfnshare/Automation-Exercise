@@ -1,3 +1,5 @@
+import time
+
 from Src.PageObject.Pages.BasePage import BasePage
 from Src.PageObject.Locators import HomePageLocators
 
@@ -16,5 +18,14 @@ class HomePage(BasePage):
         tests = [self.find_element(*self.locator.NAVBAR), self.find_element(*self.locator.SLIDER)]
         return all(tests)
 
-    def get_text(self):
-        return self.find_element(*self.locator.NAVBAR).text
+    def add_products_to_cart(self):
+        self.scroll_to_web_element(self.locator.GOOGLE_ADS)
+        self.click(self.locator.PRODUCT)
+        self.wait_for_clickable_an_element(self.locator.CONTINUE_SHOPPING)
+        self.click(self.locator.CONTINUE_SHOPPING)
+        # self.click(self.locator.SCROLL_UP)
+        self.scroll_up()
+
+    def got_to_cart_page(self):
+        self.wait_for_clickable_an_element(self.locator.CART)
+        self.click(self.locator.CART)
