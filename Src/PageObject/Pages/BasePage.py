@@ -681,7 +681,7 @@ class BasePage(object):
             # print('>>>>>>>>>>>>>>>', val)
             assert val != expected_val
 
-    def assert_element_text_in(self, choice, expected_val, *locator):
+    def assert_element_text_in(self, choice, expected_val, locator):
         val = self.get_text(*locator)
         # print(val)
         if choice == "In":

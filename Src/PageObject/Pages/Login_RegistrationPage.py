@@ -37,5 +37,10 @@ class LoginRegistrationPage(BasePage):
         self.click(self.locator.CONTINUE)
 
     def verify_logged_in_as_username(self):
+        try:
+            self.refresh()
+            self.click(self.locator.CONTINUE)
+        except:
+            print("No Google Add was Shown")
         self.wait_till_presence_of_element_located(10, self.locator.USER_NAME)
         self.assert_element_text(True, MyData.NAME, self.locator.USER_NAME)

@@ -20,10 +20,6 @@ class CartPageLocators:
     REGISTER_LOGIN = (By.XPATH, "//u[contains(text(),'Register')]")
 
 
-class CheckoutPageLocators:
-    pass
-
-
 class LoginRegistrationPageLocators:
     NAME = (By.XPATH, "//input[@name='name']")
     EMAIL = (By.XPATH, "//input[@data-qa='signup-email']")
@@ -48,7 +44,28 @@ class LoginRegistrationPageLocators:
     ACCOUNT_CREATED_TEXT = (By.XPATH, "//h2[@data-qa='account-created']")
     CONTINUE = (By.XPATH, "//a[@data-qa='continue-button']")
     USER_NAME = (By.TAG_NAME, "b")
+    GOOGLE_AD = (By.ID, "dismiss-button")
+
+
+class CheckoutPageLocators:
+    CHECKOUT_INFORMATION_BOX = (By.CSS_SELECTOR, ".checkout-information")
+    FULL_NAME = (By.XPATH, "(//li[contains(@class, 'address_firstname')])[1]")
+    COMPANY_NAME = (By.XPATH, "(//li[contains(@class, 'address_address1')])[1]")
+    ADDRESS_NAME = (By.XPATH, "(//li[contains(@class, 'address_address1')])[2]")
+    MOBILE_NUMBER_NAME = (By.XPATH, "(//li[contains(@class, 'address_phone')])[1]")
+
+    COMMENT_BOX = (By.TAG_NAME, "textarea")
+    PLACE_ORDER_BUTTON = (By.XPATH, "//a[text()='Place Order']")
 
 
 class PaymentPageLocators:
-    pass
+    PAYMENT_INFORMATION_BOX = (By.CSS_SELECTOR, ".payment-information")
+    CARD_NAME = (By.XPATH, "//input[@name='name_on_card']")
+    CARD_NUMBER = (By.XPATH, "//input[@name='card_number']")
+    CVC = (By.XPATH, "//input[@name='cvc']")
+    EXPIRATION_MONTH = (By.XPATH, "//input[@name='expiry_month']")
+    EXPIRATION_YEAR = (By.XPATH, "//input[@name='expiry_year']")
+
+    CONFIRM_ORDER_BUTTON = (By.ID, "submit")
+
+    ORDER_SUCCESS = (By.XPATH, "(//div[contains(@class, 'alert-success')])[1]")
