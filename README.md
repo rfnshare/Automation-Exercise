@@ -8,8 +8,7 @@
 <br />
 <p align="center">
     <img src="Resources/logo.png" alt="Logo" height="100">
-
-  <h3 align="center">Automation Exercise</h3>
+<h3 align="center">Automation Exercise</h3>
 
   <p align="center">
     ...
@@ -25,7 +24,7 @@
   </p>
 Introduction
 
-This is an selenium based framework that interacts with automationexercise Web App and can be used to automate given below
+This is a selenium based framework that interacts with automationexercise Web App and can be used to automate given below
 
 1. Navigate & Verify home page
 2. Add Product to cart & verify
@@ -43,7 +42,7 @@ This is an selenium based framework that interacts with automationexercise Web A
     ```
     git pull
     ```
-3. Update your test data from Excel file. (Optional Feature)
+3. Update your test data from Excel file. (Optional Feature For Future, Don't change the values)
     ```
     Test/TestData/test_data.xlsx
     ```
